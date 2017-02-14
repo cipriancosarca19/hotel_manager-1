@@ -21,13 +21,14 @@ Hotel.save = (hotel) => {
       star_rating,
       pet_friendly,
       hotel_image_url)
-      VALUES($1, $2, $3, $4, $5, $6)`
+      VALUES ($1, $2, $3, $4, $5, $6)`,
       [hotel.hotel_name,
       hotel.hotel_description,
       hotel.hotel_address,
       hotel.star_rating,
       hotel.pet_friendly,
-      hotel.hotel_image_url]);
+      hotel.hotel_image_url]
+    );
 };
 
 Hotel.update = (hotel, id) => {

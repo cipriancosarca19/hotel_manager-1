@@ -1,3 +1,4 @@
+const Hotel = require('../../models/hotel');
 let controller = {};
 
 controller.index = (req, res) => {
@@ -13,7 +14,18 @@ controller.show = (req, res) => {
 }
 
 controller.create = (req, res) => {
-  res.json(req.body);
+  // Grabs the json from the form submission, goes over to the model, and appends the data to the DB
+  Hotel.save(req.body.hotel)
+  .then(() => {
+    res.redirect('/hotels');
+  })
+  .catch((err) => {
+    res
+    .status(400)
+    .send(err);
+  });
+  // Redirects us back to /hotels
+
 }
 
 controller.update = (req, res) => {
