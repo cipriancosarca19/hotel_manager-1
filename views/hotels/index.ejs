@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hotel Manager</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/libraries/materialize/css/materialize.min.css" />
+
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- jQuery -->
+    <script src="/libraries/jquery/jquery.min.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="/libraries/materialize/js/materialize.min.js"></script>
+
+    <!-- Application JS -->
+    <script src="/js/app.js"></script>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">Hotel Property Manager</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="new.html">Add Hotel +</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <!-- One Hotel Card -->
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/hotel_sample.jpg">
+            <span class="card-title">Awesome Hotel</span>
+            <a class="btn-floating halfway-fab waves-effect waves-light red" href="edit.html"><i class="material-icons">mode_edit</i></a>
+          </div>
+
+          <div class="card-content">
+            <p>This is a very nice hotel situated right next to Battery Park with a great view of the water.</p>
+            <p>
+              <a href="#" class="activator">More Information</a>
+            </p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Awesome Hotel<i class="material-icons right">close</i></span>
+
+            <div class="row margin-top-20">
+              <div class="col s6 bold">
+                Address
+              </div>
+              <div class="col s6">
+                1234 Stuart Lane, New York, NY
+              </div>
+            </div>
+
+            <div class="row margin-top-20">
+              <div class="col s6 bold">
+                Pet Friendly
+              </div>
+              <div class="col s6">
+                Yes
+              </div>
+            </div>
+
+            <div class="row margin-top-20">
+              <div class="col s6 bold">
+                Star Rating
+              </div>
+              <div class="col s6">
+                5
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /One Hotel Card -->
+
+    </div>
+  </body>
+</html>
