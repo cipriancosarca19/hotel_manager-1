@@ -13,7 +13,7 @@ controller.show = (req, res) => {
 }
 
 controller.create = (req, res) => {
-
+  res.json(req.body);
 }
 
 controller.update = (req, res) => {
