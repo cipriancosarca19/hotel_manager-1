@@ -32,30 +32,31 @@
     </nav>
 
     <div class="row">
+      <% hotels.forEach((hotel) => { %>
       <!-- One Hotel Card -->
       <div class="col s12 m3">
         <div class="card">
           <div class="card-image">
-            <img src="/img/hotel_sample.jpg">
-            <span class="card-title">Awesome Hotel</span>
+            <img src="<%= hotel.hotel_image_url %>">
+            <span class="card-title"><%= hotel.hotel_name %></span>
             <a class="btn-floating halfway-fab waves-effect waves-light red" href="edit.html"><i class="material-icons">mode_edit</i></a>
           </div>
 
           <div class="card-content">
-            <p>This is a very nice hotel situated right next to Battery Park with a great view of the water.</p>
+            <p><%= hotel.hotel_description %></p>
             <p>
               <a href="#" class="activator">More Information</a>
             </p>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Awesome Hotel<i class="material-icons right">close</i></span>
+            <span class="card-title grey-text text-darken-4"><%= hotel.hotel_name %><i class="material-icons right">close</i></span>
 
             <div class="row margin-top-20">
               <div class="col s6 bold">
                 Address
               </div>
               <div class="col s6">
-                1234 Stuart Lane, New York, NY
+                <%= hotel.hotel_address %>
               </div>
             </div>
 
@@ -64,7 +65,11 @@
                 Pet Friendly
               </div>
               <div class="col s6">
-                Yes
+                <% if (hotel.pet_friendly) { %>
+                  Yes
+                <% } else { %>
+                  No
+                <% } %>
               </div>
             </div>
 
@@ -73,7 +78,7 @@
                 Star Rating
               </div>
               <div class="col s6">
-                5
+                <%= hotel.star_rating %>
               </div>
 
             </div>
@@ -81,6 +86,8 @@
         </div>
       </div>
       <!-- /One Hotel Card -->
+      <% }) %>
+
 
     </div>
   </body>
