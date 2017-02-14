@@ -30,58 +30,51 @@
       </ul>
     </div>
   </nav>
-
-  <div class="container margin-top-20">
-    <div class="row">
-      <div class="col s12">
-        <div class="card">
-          <div class="card-stacked">
-            <div class="card-content">
-              <div class="input-field">
-              <input type="text" placeholder="Hotel Name" />
+  <form action="/actions" method="POST">
+    <div class="container margin-top-20">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="input-field">
+                <input type="text" placeholder="Hotel Name" />
+                </div>
+                <div class="input-field">
+                  <textarea placeholder="Hotel Description" class="materialize-textarea"></textarea>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Hotel Address"/>
+                </div>
+                <div class="input-field">
+                  <select>
+                    <option value="">Hotel Star Rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <select>
+                    <option value="">Pet Friendly?</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <input type="text" placeholder="Hotel Image URL" />
+                </div>
               </div>
-
-              <div class="input-field">
-                <textarea placeholder="Hotel Description" class="materialize-textarea"></textarea>
-              </div>
-
-              <div class="input-field">
-                <input type="text" placeholder="Hotel Address" />
-              </div>
-
-              <div class="input-field">
-                <select>
-                  <option value="">Hotel Star Rating</option>
-                  <option value="1">1 Star</option>
-                  <option value="2">2 Stars</option>
-                  <option value="3">3 Stars</option>
-                  <option value="4">4 Stars</option>
-                  <option value="5">5 Stars</option>
-                </select>
-              </div>
-
-              <div class="input-field">
-                <select>
-                  <option value="">Pet Friendly?</option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
-                </select>
-              </div>
-
-              <div class="input-field">
-                <input type="text" placeholder="Hotel Image URL" />
+              <div class="card-action">
+                <button type="submit" class="waves-effect waves-light btn">Submit Hotel</button>
               </div>
             </div>
-
-            <div class="card-action">
-              <button type="submit" class="waves-effect waves-light btn">Submit Hotel</button>
-            </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
-
+  </form>
 </body>
 </html>
