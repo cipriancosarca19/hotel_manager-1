@@ -30,24 +30,32 @@
       </ul>
     </div>
   </nav>
-  <form action="/hotels" method="POST">
+  <form action="/hotels" method="put">
     <div class="container margin-top-20">
       <div class="row">
         <div class="col s12">
-          <div class="card">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="img/hotel_sample.jpg">
+
+              <button class="btn-floating btn-large waves-effect waves-light red margin-top-20" style="margin-left:10px;"><i class="material-icons">delete</i></button>
+            </div>
             <div class="card-stacked">
               <div class="card-content">
                 <div class="input-field">
-                  <input name="hotel[hotel_name]" type="text" placeholder="Hotel Name" />
+                  <input name="hotel_name" type="text" placeholder="Hotel Name" />
                 </div>
+
                 <div class="input-field">
-                  <textarea name="hotel[hotel_description]" placeholder="Hotel Description" class="materialize-textarea"></textarea>
+                  <textarea name="hotel_description"  placeholder="hotel_description" class="materialize-textarea"></textarea>
                 </div>
+
                 <div class="input-field">
-                  <input name="hotel[hotel_address]" type="text" placeholder="Hotel Address"/>
+                  <input name="hotel_address"  type="text" placeholder="Hotel Address" />
                 </div>
+
                 <div class="input-field">
-                  <select name="hotel[star_rating]">
+                  <select name="star_rating" >
                     <option value="">Hotel Star Rating</option>
                     <option value="1">1 Star</option>
                     <option value="2">2 Stars</option>
@@ -56,19 +64,21 @@
                     <option value="5">5 Stars</option>
                   </select>
                 </div>
+
                 <div class="input-field">
-                  <select name="hotel[pet_friendly]">
+                  <select name="pet_friendly" >
                     <option value="">Pet Friendly?</option>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
                   </select>
                 </div>
+
                 <div class="input-field">
-                  <input name="hotel[hotel_image_url]" type="text" placeholder="Hotel Image URL" />
+                  <input name="hotel_image_url"  type="text" placeholder="Hotel Image URL" />
                 </div>
               </div>
               <div class="card-action">
-                <button type="submit" class="waves-effect waves-light btn">Submit Hotel</button>
+                <button class="waves-effect waves-light btn">Submit Changes</button>
               </div>
             </div>
           </div>
@@ -76,5 +86,6 @@
       </div>
     </div>
   </form>
+
 </body>
 </html>

@@ -13,10 +13,11 @@ controller.index = (req, res) => {
 };
 
 controller.new = (req, res) => {
-  res.render('hotels/new')
+  res.render('hotels/new');
 };
 
 controller.show = (req, res) => {
+    res.render('hotels/show')
 };
 
 controller.create = (req, res) => {
@@ -35,7 +36,16 @@ controller.create = (req, res) => {
 };
 
 controller.update = (req, res) => {
-
+  Hotel
+  .update(req.body.hotel, req.params.id)
+  .then(() => {
+    res.redirect('/hotels');
+  })
+  .catch((err) => {
+    res
+    .status(400)
+    .send(err)
+  });
 };
 
 controller.destroy = (req, res) => {
