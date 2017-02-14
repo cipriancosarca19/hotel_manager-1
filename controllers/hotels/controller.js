@@ -9,6 +9,9 @@ controller.new = (req, res) => {
   res.render('hotels/new')
 }
 
+controller.show = (req, res) => {
+}
+
 controller.create = (req, res) => {
 
 }
