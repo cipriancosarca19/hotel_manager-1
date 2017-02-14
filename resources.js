@@ -5,4 +5,5 @@ const router = express.Router();
 
 router.use('/hotels', require('./controllers/hotels'));
 
+
 module.exports = router;

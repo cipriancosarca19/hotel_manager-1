@@ -5,8 +5,8 @@ controller.index = (req, res) => {
   res.render('hotels/index')
 };
 
-controller.show = (req, res) => {
-
+controller.new = (req, res) => {
+  res.render('hotels/new')
 }
 
 controller.create = (req, res) => {
